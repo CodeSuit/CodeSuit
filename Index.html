@@ -355,40 +355,27 @@
                <div><img src="images/13184987_5127311.svg" class="image_10"></div>
             </div>
             <div class="col-md-6">
-               <form class="row g-3 needs-validation" novalidate netlify>
-                  <div class="col-md-6">
-                    <label for="validationCustom01" class="form-label">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01"  required netlify>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="validationCustom02" class="form-label">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02"  required netlify>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <br>
-                  <br>
-                  <br>
-                  <div class="col-md-6">
-                    <label for="validationCustomUsername" class="form-label">Email</label>
-                    <div class="input-group has-validation">
-                      <span class="input-group-text" id="inputGroupPrepend">@</span>
-                      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required netlify>
-                      <div class="invalid-feedback">
-                        Enter Email
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="validationCustom03" class="form-label">Message</label>
-                    <input type="text" class="form-control" id="validationCustom03" required netlify>
-                    <div class="invalid-feedback">
-                      Please provide a Message.
-                    </div>
+               <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
                   </div>
                  
                   <div class="col-12">
